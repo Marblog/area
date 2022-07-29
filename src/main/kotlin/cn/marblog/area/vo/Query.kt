@@ -1,6 +1,7 @@
 package cn.marblog.area.vo
 
 class Query {
-    var pageNo: Long = 1
-    var pageSize: Long = 10
+    var pageNo = 1L
+    var pageSize = 10L
+    var name: String? = null
 }

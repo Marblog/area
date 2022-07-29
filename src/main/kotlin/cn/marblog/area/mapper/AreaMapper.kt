@@ -1,6 +1,7 @@
 package cn.marblog.area.mapper
 
 import cn.marblog.area.entity.Area
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper
 import com.baomidou.mybatisplus.core.mapper.BaseMapper
 import com.baomidou.mybatisplus.core.metadata.IPage
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page
@@ -18,6 +19,6 @@ import org.apache.ibatis.annotations.Mapper
 interface AreaMapper : BaseMapper<Area> {
 
 
-    fun selectByPage(page: Page<Area>): IPage<Area>
+    fun selectByPage(page: Page<Area>, query: QueryWrapper<Area>): IPage<Area>
 
 }

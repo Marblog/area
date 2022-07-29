@@ -3,7 +3,9 @@ package cn.marblog.area.service.impl
 import cn.marblog.area.entity.Area
 import cn.marblog.area.mapper.AreaMapper
 import cn.marblog.area.service.IAreaService
+import cn.marblog.area.util.Result
 import cn.marblog.area.vo.Query
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
@@ -25,11 +27,15 @@ class AreaServiceImpl : ServiceImpl<AreaMapper, Area>(), IAreaService {
 
     override fun selectPage(query: Query): Result<*> {
         return try {
+            val like = QueryWrapper<Area>().like("name", query.name)
             val page = Page<Area>(query.pageNo, query.pageSize)
-            val selectPage = areaMapper.selectByPage(page)
-            Result.Companion.success(selectPage)
+            val selectPage = areaMapper.selectPage(page, like)
+            Result.buildResult(Result.Status.OK, selectPage)
         } catch (e: Exception) {
-            Result.Companion.failure<String>(exception = e)
+            Result.buildResult(Result.Status.ERROR, e)
         }
+
+
     }
 }
+

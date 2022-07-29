@@ -1,6 +1,7 @@
 package cn.marblog.area.controller
 
 import cn.marblog.area.service.IAreaService
+import cn.marblog.area.util.Result
 import cn.marblog.area.vo.Query
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.beans.factory.annotation.Autowired
