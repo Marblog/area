@@ -1,4 +1,4 @@
-package com.cnooc.epidemic.config
+package cn.marblog.area.config
 
 import com.baomidou.mybatisplus.annotation.DbType
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor
@@ -11,10 +11,10 @@ import org.springframework.context.annotation.Configuration
  * @author mj
  */
 @Configuration
-@MapperScan("com.cnooc.epidemic.mapper")
-open class MybatisConfig {
+@MapperScan("cn.marblog.area.mapper")
+class MybatisConfig {
     @Bean
-    open fun mybatisPlusInterceptor(): MybatisPlusInterceptor {
+    fun mybatisPlusInterceptor(): MybatisPlusInterceptor {
         val interceptor = MybatisPlusInterceptor()
         interceptor.addInnerInterceptor(PaginationInnerInterceptor(DbType.MYSQL))
         return interceptor

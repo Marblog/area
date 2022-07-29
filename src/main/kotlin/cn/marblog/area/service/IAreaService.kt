@@ -1,7 +1,7 @@
 package cn.marblog.area.service;
 
 import cn.marblog.area.entity.Area
-import com.baomidou.mybatisplus.core.metadata.IPage
+import cn.marblog.area.vo.Query
 import com.baomidou.mybatisplus.extension.service.IService
 
 /**
@@ -13,5 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService
  * @since 2022-07-27
  */
 interface IAreaService : IService<Area> {
-    fun selectPage(pageNo: Long, pageSize: Long): List<Area>
+    fun selectPage(query: Query): Result<*>
 }

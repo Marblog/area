@@ -1,4 +1,4 @@
-package com.cnooc.epidemic.config
+package cn.marblog.area.config
 
 import io.swagger.v3.oas.models.ExternalDocumentation
 import io.swagger.v3.oas.models.OpenAPI
@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 /**
- * @author 18721
+ * @author mj
  */
 @Configuration
-open class SpringDocConfig {
+class SpringDocConfig {
     @Bean
-    open fun springShopOpenApi(): OpenAPI {
+    fun springShopOpenApi(): OpenAPI {
         return OpenAPI()
             .info(
                 Info().title("SpringShop API")
