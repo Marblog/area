@@ -1,4 +1,4 @@
-package cn.marblog.area.service;
+package cn.marblog.area.service
 
 import cn.marblog.area.entity.Area
 import cn.marblog.area.vo.Query

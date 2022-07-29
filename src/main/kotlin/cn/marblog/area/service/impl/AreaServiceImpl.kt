@@ -1,4 +1,4 @@
-package cn.marblog.area.service.impl;
+package cn.marblog.area.service.impl
 
 import cn.marblog.area.entity.Area
 import cn.marblog.area.mapper.AreaMapper

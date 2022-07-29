@@ -1,4 +1,4 @@
-package cn.marblog.area.mapper;
+package cn.marblog.area.mapper
 
 import cn.marblog.area.entity.Area
 import com.baomidou.mybatisplus.core.mapper.BaseMapper
