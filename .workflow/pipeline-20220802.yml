@@ -3,6 +3,10 @@ name: pipeline-20220802
 displayName: pipeline-20220802
 triggers:
   trigger: auto
+  push:
+    branches:
+      prefix:
+        - ''
 stages:
   - name: stage-be8d46b7
     displayName: 未命名
