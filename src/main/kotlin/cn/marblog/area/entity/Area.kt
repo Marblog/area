@@ -67,19 +67,4 @@ class Area : Serializable {
      */
     var level: Int? = null
 
-    override fun toString(): String {
-        return "Area{" +
-                "id=" + id +
-                ", name=" + name +
-                ", pid=" + pid +
-                ", provinceCode=" + provinceCode +
-                ", cityCode=" + cityCode +
-                ", areaCode=" + areaCode +
-                ", streetCode=" + streetCode +
-                ", committeeCode=" + committeeCode +
-                ", committeeType=" + committeeType +
-                ", sort=" + sort +
-                ", level=" + level +
-                "}"
-    }
 }

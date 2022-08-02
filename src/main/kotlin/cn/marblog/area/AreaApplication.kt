@@ -8,4 +8,5 @@ class AreaApplication
 
 fun main() {
     runApplication<AreaApplication>()
+
 }

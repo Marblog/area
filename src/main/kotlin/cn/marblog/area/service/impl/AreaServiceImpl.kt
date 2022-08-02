@@ -3,7 +3,7 @@ package cn.marblog.area.service.impl
 import cn.marblog.area.entity.Area
 import cn.marblog.area.mapper.AreaMapper
 import cn.marblog.area.service.IAreaService
-import cn.marblog.area.util.Result
+
 import cn.marblog.area.vo.Query
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page
@@ -26,15 +26,11 @@ class AreaServiceImpl : ServiceImpl<AreaMapper, Area>(), IAreaService {
     private lateinit var areaMapper: AreaMapper
 
     override fun selectPage(query: Query): Result<*> {
-        return try {
-            val like = QueryWrapper<Area>().like("name", query.name)
-            val page = Page<Area>(query.pageNo, query.pageSize)
-            val selectPage = areaMapper.selectPage(page, like)
-            Result.buildResult(Result.Status.OK, selectPage)
-        } catch (e: Exception) {
-            Result.buildResult(Result.Status.ERROR, e)
-        }
 
+        val wrapper = QueryWrapper<Area>().like("name", query.name)
+        val page = Page<Area>(query.pageNo, query.pageSize)
+        val selectPage = areaMapper.selectPage(page, wrapper)
+        return Result.success(selectPage)
 
     }
 }
