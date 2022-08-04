@@ -5,7 +5,6 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class AreaApplication
-
 fun main() {
     runApplication<AreaApplication>()
 
