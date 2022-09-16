@@ -41,7 +41,7 @@ dependencies {
     implementation("com.baomidou:mybatis-plus-boot-starter:3.5.2")
     implementation("com.baomidou:mybatis-plus-generator:3.5.3")
     implementation("org.freemarker:freemarker:2.3.31")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.9")
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
 
     implementation("org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR12")
     implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2.2.7.RELEASE")
